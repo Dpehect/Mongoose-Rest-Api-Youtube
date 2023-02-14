@@ -1,0 +1,27 @@
+<% if (books.length > 0) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Başlık</th>
+          <th>Yazar</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% books.forEach(function(book) { %>
+          <tr>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+            <td>
+              <a href="/books/<%= book._id %>">Göster</a>
+              <a href="/books/<%= book._id %>/edit">Düzenle</a>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p>Kitap Bulunamadı.</p>
+  <% } %>
+  <a href="/books/new">Yeni Kitap</a>
+  

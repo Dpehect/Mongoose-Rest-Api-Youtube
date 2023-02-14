@@ -1,0 +1,16 @@
+<h2>Edit Book</h2>
+<form action="/books/<%= book._id %>?_method=PUT" method="post">
+  <div>
+    <label for="title">Başlık:</label>
+    <input type="text" id="title" name="title" value="<%= book.title %>">
+  </div>
+  <div>
+    <label for="author">Yazar:</label>
+    <input type="text" id="author" name="author" value="<%= book.author %>">
+  </div>
+  <button type="submit">Güncelle</button>
+</form>
+<form action="/books/<%= book._id %>?_method=DELETE" method="post">
+  <button type="submit">Sil</button>
+</form>
+<a href="/books">Geri</a>
