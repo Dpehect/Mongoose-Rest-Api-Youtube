@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 mongoose.set('strictQuery', true);
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://Dpehect:deneme123@cluster0.olfqcop.mongodb.net/books', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://username:password@cluster0.olfqcop.mongodb.net/books', { useNewUrlParser: true });
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
